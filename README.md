@@ -1,4 +1,4 @@
-# React Powerful Modal
+# React Powerfool Modal
 
 Package for a React modal.
 
@@ -6,27 +6,39 @@ Package for a React modal.
 
 1. Installation
 2. Example
-3. Demos
 
------------------
+---
 
 ### Installation
 
-To install, you can use [npm](https://nodejs.org/en/) or [yarn](https://yarnpkg.com/):
+To install, you can use [npm](https://nodejs.org/en/):
 
 ```
-$ npm install --save react-powerful-modal
-$ yarn add react-powerful-modal
+$ npm install --save react-powerfool-modal
 ```
------------------
+
+---
 
 ### Example
 
 ```javascript
-var prenom = 'quentin';
-console.log('bonjour ' + prenom);
+import React, { useState } from "react";
+import { Modal } from "react-powerfool-modal";
+
+function App() {
+  const [show, setShow] = useState(false);
+
+  return (
+    <div>
+      <button onClick={() => setShow(true)}>Open the modal</button>
+      <Modal
+        show={show}
+        onClose={() => setShow(false)}
+        message="The modal is open ! If you want you can close it with the button"
+      />
+    </div>
+  );
+}
+
+export default App;
 ```
-
------------------
-
-### Demos
